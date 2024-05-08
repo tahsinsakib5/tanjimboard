@@ -1,4 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tanjibbord/adminpane/adminpanel.dart';
+import 'package:tanjibbord/class.dart';
 import 'package:tanjibbord/homepage.dart';
 
 class Searchpage extends StatefulWidget {
@@ -100,6 +104,9 @@ class _SearchpageState extends State<Searchpage> {
     }
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Adminpanel(),));
+      },child:Icon(Icons.admin_panel_settings),),
       body: Column(
         children: [
           TextField(
@@ -122,9 +129,74 @@ class _SearchpageState extends State<Searchpage> {
                       ),
                     ));
               },
-              child: const Text("Search"))
+              child: const Text("Search")),
+
+
+  ElevatedButton(
+              onPressed: () {
+              
+
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Adminpanel()
+                    ));
+              },
+              child: const Text("text")),
+
+
+
+
+
+
+            FutureBuilder(
+              future: getdata(),
+              builder: (context, snapshot) {
+                if(snapshot.connectionState==ConnectionState.done){
+                   
+                      return  ListView.builder(itemCount:5,itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Text(snapshot.data![index].name),
+                     Text(snapshot.data![index].english),
+                      Text(snapshot.data![index].rool)
+                  ],
+                );
+              },);
+                    
+                }else{
+                      return CircularProgressIndicator();
+                    }
+                
+              },
+      
+           
+            )
+              
+              
+
+
+              
         ],
       ),
     );
+  }
+
+  Future getdata ()async{
+ List datalist = [];
+
+   var colaction=  await FirebaseFirestore.instance.collection("resultone").get();
+
+
+   for (var data in colaction.docs){
+   String name = data.get("name");
+   String rool = data.get("rool");
+   String english = data.get("english");
+
+Person datas= Person(name: name, rool: rool, english: english);
+
+    datalist.add(datas);
+   }
+   return datalist;
   }
 }

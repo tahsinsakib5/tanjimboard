@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782612487385",
+    "project_id": "tanjimboard",
+    "storage_bucket": "tanjimboard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782612487385:android:4472f632274ed4c2da32c8",
+        "android_client_info": {
+          "package_name": "com.example.tanjibbord"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgl7kLUGMzR1XxFmV9TxbBSz9txTdYZ4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

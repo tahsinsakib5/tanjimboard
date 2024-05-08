@@ -32,6 +32,33 @@
   <title>tanjibbord</title>
   <link rel="manifest" href="manifest.json">
 
+
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+ import { initializeApp } from "firebase/app";
+ import { getAnalytics } from "firebase/analytics";
+ // TODO: Add SDKs for Firebase products that you want to use
+ // https://firebase.google.com/docs/web/setup#available-libraries
+ 
+ // Your web app's Firebase configuration
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ const firebaseConfig = {
+  apiKey: "AIzaSyB9tvIW2p3SPRfff-362pKH_BAOc0tRd7E",
+  authDomain: "again-15d35.firebaseapp.com",
+  projectId: "again-15d35",
+  storageBucket: "again-15d35.appspot.com",
+  messagingSenderId: "713538178850",
+  appId: "1:713538178850:web:203cd76b6cd0440b599f7b",
+  measurementId: "G-9GKP9C4H0V"
+};
+ 
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ const analytics = getAnalytics(app);
+ 
+    </script>
+
   <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
