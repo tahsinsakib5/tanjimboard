@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
-  final Map<String, dynamic>? result;
+  final Map<String, dynamic> result;
   const HomePage({
     super.key,
     required this.result,
@@ -11,7 +9,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(result);
+    String name = result['name'];
+
     return Scaffold(
       body: Container(
         height: 1200,
@@ -71,7 +70,7 @@ class HomePage extends StatelessWidget {
                   TableCell(child: customtext(customt: "রেজি. নং - ৯৮৯৬"))
                 ]),
                 TableRow(children: [
-                  TableCell(child: customtext(customt: result!['name'])),
+                  TableCell(child: customtext(customt: name)),
                   TableCell(
                       child: customtext(customt: "জন্ম তারিখ - ১৩-১০-২০০৩"))
                 ]),
