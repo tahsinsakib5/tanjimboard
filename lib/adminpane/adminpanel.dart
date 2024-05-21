@@ -60,6 +60,8 @@ class _AdminpanelState extends State<Adminpanel> {
                                 builder: (context) => const Statechange(),
                               ));
       },child:Icon(Icons.admin_panel_settings),),
+
+      appBar: AppBar(titleTextStyle: TextStyle(fontSize:22,fontWeight: FontWeight.w700), title: Text("M A Majid Science College",),),
       body: Row(
         children: [
           Expanded(

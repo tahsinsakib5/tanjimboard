@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="tanjibbord"
+        android:label="M A Majid Science College"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

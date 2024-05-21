@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                               "assets/logo.png",
                               
                             ),
-                            height:75,
+                            height:100,
                           ),
                         ),
                         Column(
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                             ),
                             Text("Khirati Kapasia Gazipure",style:TextStyle(fontSize:20),),
                             Text(
-                                "হোল্ডিং-২০৫,কাজলা ভাঙ্গাপ্রেস,যাত্রাবাড়ী, ঢাকা-১২৩৬"),
+                                "Firs Semester Exam -2024"),
                              SizedBox(
                               height:25,
                              )
@@ -317,7 +317,7 @@ class HomePage extends StatelessWidget {
                         child: TableCell(
                             child: Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: customtext(customt: "92", ),
+                          child: customtext(customt: "0", ),
                         )))
                   ]),
                 ],

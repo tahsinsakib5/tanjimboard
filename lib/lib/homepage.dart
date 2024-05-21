@@ -72,7 +72,7 @@ class HomePages extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical:40),
               child: Column(
                 children: [
-                  Text("our village popular destination",style:TextStyle(fontSize:40,fontWeight:FontWeight.w700),),
+                  Text("our Collage Campus",style:TextStyle(fontSize:40,fontWeight:FontWeight.w700),),
 
                   Text("Travelling More Easy With Our Guide Team & Our Travel Service Agency",style:TextStyle(fontSize:20,fontWeight:FontWeight.w700),),
                 ],
