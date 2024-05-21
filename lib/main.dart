@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tanjibbord/adminpane/adminpanel.dart';
+import 'package:tanjibbord/lib/scrolclass.dart';
 import 'package:tanjibbord/resultsearchpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+       scrollBehavior: MyCustomScrollBehavior(),
       home: Adminpanel(),
     );
   }
